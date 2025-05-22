@@ -1,0 +1,21 @@
+<div class="routine-form-container">
+  <h2>Crear Nueva Rutina</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="name" name="name" placeholder="Nombre de la rutina" required />
+
+    <div *ngFor="let activity of activities; let i = index" class="activity-group">
+      <input [(ngModel)]="activity.title" name="title{{i}}" placeholder="Actividad" required />
+      <input [(ngModel)]="activity.day" name="day{{i}}" placeholder="Día (ej: Lunes)" required />
+      <input [(ngModel)]="activity.startTime" name="start{{i}}" type="time" required />
+      <input [(ngModel)]="activity.endTime" name="end{{i}}" type="time" required />
+      <button type="button" (click)="removeActivity(i)">Eliminar</button>
+    </div>
+
+    <button type="button" (click)="addActivity()">+ Añadir Actividad</button>
+    <button type="submit">Guardar Rutina</button>
+  </form>
+
+  <p *ngIf="success" class="success">{{ success }}</p>
+  <p *ngIf="error" class="error">{{ error }}</p>
+</div>

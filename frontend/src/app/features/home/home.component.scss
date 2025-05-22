@@ -1,0 +1,30 @@
+/* frontend/src/app/features/home/home.component.scss */
+
+.home-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.btn-home {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-home:hover {
+  background-color: #0056b3;
+}

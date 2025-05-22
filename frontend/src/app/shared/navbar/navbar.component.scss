@@ -1,0 +1,11 @@
+/* src/app/shared/navbar/navbar.component.scss */
+.navbar {
+  display: flex;
+  gap: 1rem;
+  background-color: #222;
+  padding: 1rem;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}

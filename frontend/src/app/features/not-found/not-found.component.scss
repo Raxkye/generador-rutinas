@@ -1,0 +1,30 @@
+.not-found-container {
+  text-align: center;
+  margin-top: 100px;
+
+  h1 {
+    font-size: 6rem;
+    color: #dc3545;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .actions {
+    margin-top: 2rem;
+
+    a {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="routine-container">
+  <h2>Mis Rutinas</h2>
+
+  <button class="btn-generate" (click)="generarNuevaRutina()">
+    Generar Nueva Rutina Automáticamente
+  </button>
+
+  <div *ngIf="error" class="error-message">{{ error }}</div>
+
+  <ul *ngIf="routines.length > 0; else sinRutinas">
+    <li *ngFor="let rutina of routines">
+      <h3>{{ rutina.name }}</h3>
+      <ul>
+        <li *ngFor="let actividad of rutina.activities">
+          {{ actividad.day | titlecase }} - {{ actividad.time }}: {{ actividad.title }}
+        </li>
+      </ul>
+      <button (click)="deleteRoutine(rutina._id)">Eliminar rutina</button>
+    </li>
+  </ul>
+
+  <ng-template #sinRutinas>
+    <p>No tienes rutinas guardadas.</p>
+  </ng-template>
+</div>
